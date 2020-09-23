@@ -43,6 +43,14 @@ new Vue({
         getRandom(min, max) {
             const value = Math.random() * (max - min) + min
             return Math.round(value)
+        },
+        heal() {
+            this.playerLife += this.getRandom(8, 15)
+            //const heal = this.getRandom(5, 15)
+            //this.playerLife = Math.min(this.playerLife + heal, 100)
+            this.attackMonster()
+            if(this.playerLife > 100)
+                this.playerLife = 100
         }
 
     },
