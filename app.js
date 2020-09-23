@@ -64,11 +64,11 @@ new Vue({
             this.playerLife += heal
             //const heal = this.getRandom(5, 15)
             //this.playerLife = Math.min(this.playerLife + heal, 100)
-            this.attackMonster()
             if(this.playerLife > 100)
                 this.playerLife = 100
 
             this.registerLog(this.textHealPlayer + heal, 'player')
+            this.attackMonster()
         },
         registerLog(text, cls) {
             this.logs.unshift({ text, cls }) //adiciona sempre na primeira posição do array
