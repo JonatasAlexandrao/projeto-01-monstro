@@ -29,7 +29,7 @@
         </div>
         <div>{{ monsterLife }}%</div>
       </div>
-      
+
     </div>
 
     <div v-if="hasResult" class="panel result">
@@ -40,8 +40,10 @@
     <div class="panel buttons">
       
       <template v-if="running">
-        <button class="btn attack">Ataque</button>
-        <button class="btn especial-attack">Ataque Especial</button>
+        <button class="btn attack"
+          @click="attack(false)">Ataque</button>
+        <button class="btn especial-attack"
+          @click="attack(true)">Ataque Especial</button>
         <button class="btn heal">Curar</button>
         <button class="btn giv-up" @click="running = false">Desistir</button>
       </template>
