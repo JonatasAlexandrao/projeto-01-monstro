@@ -38,6 +38,7 @@ html {
     width: 80%;
     height: 20px;
     border: 1px solid #AAA;
+    
 }
 
 .life-bar .life {
@@ -45,6 +46,7 @@ html {
     justify-content: center;
     height: 100%;
     background-color: green;
+    
 }
 
 .life-bar .life.danger {
